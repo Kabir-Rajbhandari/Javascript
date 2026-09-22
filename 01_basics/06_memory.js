@@ -2,7 +2,7 @@
 /**
  * Types of memory: 
  * 1. Stack Memory - All the primitive data types uses stack memory -> get copy
- * 2. Heap Memory - All the non-primitive data types uses heap memory - get reference of original value
+ * 2. Heap Memory - All the non-primitive data types uses heap memory -> get reference of original value
  */
 
 // example: 
