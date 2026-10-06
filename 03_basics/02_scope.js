@@ -1,3 +1,4 @@
+// part 1
 // scope statement
 // => function / block scope, global scope and lexical scope {}
 
@@ -23,9 +24,62 @@ if (true){
 }
 
 for (let i = 0; i <= 10; i++){
-    
+
 } 
 
 // console.log (a); // => undefined
 // console.log (b); // => undefined
 console.log (c); // => 60 scope doesnot works in the var case
+
+
+// => scope part 2
+// => nested scope
+
+function one (){
+    const userName = "qwerty";
+
+    function two(){
+        const website = "youtube.com";
+        console.log (userName);
+    }
+    // console.log(website); => display error
+    two(); // => userName
+}
+
+one(); // => empty output
+
+// closure concept
+
+
+if (true){
+    const userName = "qwerty";
+    if (userName === "qwerty"){
+        const website = "youtube.com";
+        console.log (userName + " " + website);
+    }
+
+    //console.log(website); // => error
+}
+
+//console.log(userName); // => error
+
+// mini-hoisting:
+// in JS, variables can hold anything such as JSON value, function
+
+// can executable: 
+addOne(3);
+
+function addOne(num){
+    return num + 1;
+}
+addOne (3);
+
+// also called as expressions
+// but in this shows error
+addTwo (7);
+const addTwo = function (num){
+    return num + 2;
+}
+addTwo (6);
+
+
