@@ -39,3 +39,17 @@ console.log("You are an adult..");
 ;
 
 
+// logical operator: && <and>, || <or>, or ! <not>
+
+const userLoggedIn = true;
+const haveDebitCard = true;
+
+if (userLoggedIn && haveDebitCard){
+    console.log ("Allowed");
+    
+}else if (userLoggedIn || haveDebitCard){
+    console.log ("Not Allowed");
+}else if (!userLoggedIn){
+    console.log( "Not Allowed");
+  
+}
