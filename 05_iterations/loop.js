@@ -45,3 +45,35 @@ for (let i = 1; i <= 20; i++){
     console.log(i);
     
 }
+
+
+console.log(`\nWhile Loop\n`);
+
+// while and do-while loop
+
+// => while loop
+
+let i = 1;
+
+while (i <= 10){
+    console.log(i);
+    i++;
+}
+
+let myArr = [1,2,3,4,5,6];
+let arrIndex = 0;
+
+while (arrIndex <= (myArr.length - 1)){
+    console.log(`Array Value: ${myArr[arrIndex]}`);
+    arrIndex ++;
+}
+
+// => do-while loop
+
+
+// work first condition checking later, like simply the scope statement syntax usually run once
+let score = 11;
+do{
+console.log ("Your Score is " + score);
+score ++;
+}while(score <= 10);
