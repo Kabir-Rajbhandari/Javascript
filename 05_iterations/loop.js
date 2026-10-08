@@ -353,3 +353,33 @@ const publishAfter2k = books.filter ((bk) => {
 });
 
 console.log(publishAfter2k);
+
+// another method => map ()
+
+
+const numInArr = [1,2,3,4,5,6];
+
+const additionNum = numInArr.map( (num) => {
+    return num + 10;
+});
+
+console.log(additionNum);
+
+const newAddArr = [];
+numInArr.forEach((num) => {
+    newAddArr.push (num + 10);
+});
+
+console.log(newAddArr);
+
+
+// chainning method ()
+const chainingArr = numInArr
+                    .map((num) => num * 10)
+                    .map((num) => num + 1);
+console.log(chainingArr);
+
+const anotherOne = numInArr
+                   .filter((num) => num > 5)
+                   .map ((num) => num * 100);
+console.log(anotherOne);
