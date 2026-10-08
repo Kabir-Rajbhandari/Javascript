@@ -177,3 +177,85 @@ const arr2 = [1,2,3,4,5,6];
 for (const key in arr2){
     console.log(arr2[key]);
 }
+
+// for-in loop in Map
+
+const map2 = new Map();
+
+map2.set ('NEP', "Nepal");
+map2.set ('IN', "India");
+map2.set ('FR', "France");
+
+// not iterable
+for (const key in map2){
+    console.log(key);
+}
+
+
+// for-each loop -> Higher order function
+
+const coding = ["py", "js", "cpp", "rb", "dart", "kt", "java"];
+
+// => approach 1st
+
+// => call back function no function name defined
+coding.forEach(function (item){
+    console.log(item);
+    
+});
+
+// approach 2
+// arrow function concept
+
+coding.forEach(
+    (item) => {
+        console.log(item);
+    }
+);
+
+
+function printMe (item){
+    console.log(item);   
+}
+
+
+// => only reference printMe not the execution one printMe()
+coding.forEach (printMe);
+
+
+// => item -> each item from the array
+// => index -> each item index of the array
+// => arr -> overall arr value
+coding.forEach((item,index,arr) => {
+    console.log(item, index, arr);
+});
+
+// [{},{},{}]
+// ["","",""]
+
+const employeeList = [
+    {
+        employeeId: "E001",
+        employeeName: "Qwerty Iop",
+        employeeIsPresent: false
+    },
+    {
+        employeeId: "E002",
+        employeeName: "John Doe",
+        employeeIsPresent: true
+    },
+
+    {
+        employeeId: "E003",
+        employeeName: "Asdfg Jkl",
+        employeeIsPresent: true
+    }
+];
+
+// from database the response cames in array and the value is always in the object format, so that the iteration for this type is necessary
+
+employeeList.forEach((item) => {
+    console.log(item.employeeId); // => log all the empId
+    console.log(item.employeeIsPresent); //=> log all the empState
+    
+});
