@@ -259,3 +259,97 @@ employeeList.forEach((item) => {
     console.log(item.employeeIsPresent); //=> log all the empState
     
 });
+
+
+// => some more on forEach loop
+
+const loops = ["for", "forEach", "for in", "for of", "while", "do while"];
+
+// const storeValue = loops.forEach( (item) => {
+//     console.log(item); 
+//     return item; // without return or with return the item is not passed to the variable
+// });
+
+// console.log(storeValue);
+
+
+// methods or functon
+
+const myNum = [1,2,3,4,5,6,7,8];
+// filter does the same work as forEach does but the forEach doesnot return the value whereas the filter return the value
+const storemyNum = myNum.filter((num) => num > 4); //=> need to pass condition in filter
+// const storemyNum = myNum.filter ( (num) => {
+//     num > 4;
+//     return num > 4;
+// } ); // return empty array for successful return we need to include return because we have open the scope {}, 
+// note: if we have open the scope {} we need to add return for the value, if their is no scope / implicit function then no need to write the return..
+console.log(storemyNum);
+
+
+// same with forEach loop
+
+const newNum = [];
+
+myNum.forEach( (num) => {
+    if (num > 5){
+        newNum.push(num);
+    }
+} );
+
+console.log(newNum);
+
+
+
+// simple concept of filter method:
+
+const books = [
+    {
+        book:"Book 1", 
+        genre: "Fiction",
+        publish: 2001,
+        edition: 2005
+    },{
+        book:"Book 2", 
+        genre: "History",
+        publish: 1986,
+        edition: 1999
+    },{
+        book:"Book 3", 
+        genre: "Non-Fiction",
+        publish: 2003,
+        edition: 2007
+    },{
+        book:"Book 4", 
+        genre: "Fiction",
+        publish: 2002,
+        edition: 2008
+    },{
+        book:"Book 5", 
+        genre: "History",
+        publish: 2003,
+        edition: 2009
+    },{
+        book:"Book 6", 
+        genre: "History",
+        publish: 2004,
+        edition: 2012
+    },{
+        book:"Book 7", 
+        genre: "Science",
+        publish: 2001,
+        edition: 2011
+    },
+];
+
+const userFilter = books.filter(
+    (bookItem) => bookItem.genre === "Fiction"
+);
+
+console.log(userFilter);
+
+
+const publishAfter2k = books.filter ((bk) => {
+    return (bk.publish >= 2000 && bk.genre === "Fiction");
+});
+
+console.log(publishAfter2k);
