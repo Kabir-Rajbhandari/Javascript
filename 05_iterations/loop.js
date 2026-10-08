@@ -383,3 +383,39 @@ const anotherOne = numInArr
                    .filter((num) => num > 5)
                    .map ((num) => num * 100);
 console.log(anotherOne);
+
+// reduce (): the reduce () method executes a user-supplied "reducer"
+
+const serialNum = [1,2,3,4,5];
+
+const init = 0;
+
+const total = serialNum.reduce((acc, currval) => {
+    return acc + currval
+}, init);
+
+console.log(total);
+
+
+const shoppingCart = [
+    {
+        courseName: "JS Course",
+        price: 1999
+    }
+    ,{
+        courseName: "Python Coursse",
+        price: 2555
+    },
+    {
+        courseName: "Mobile App course",
+        price: 5999
+    }
+];
+
+const initi = 0;
+
+const totalPrice = shoppingCart.reduce ((acc, currval) => {
+    return acc + currval.price
+}, initi);
+
+console.log(totalPrice);
