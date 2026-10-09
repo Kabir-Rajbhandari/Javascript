@@ -15,7 +15,6 @@ console.log (employeeData);
 // => singleton
 
 
-
 // object literals
 
 // constructor method  => singleton 
