@@ -419,3 +419,47 @@ const totalPrice = shoppingCart.reduce ((acc, currval) => {
 }, initi);
 
 console.log(totalPrice);
+
+
+
+let userRomanNum;
+
+const RomanCalc = {
+    I : 1,
+    V : 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M:1000
+}
+
+
+// => for, for-in for-of, forEach, do-while, while
+
+const groceryArr = [
+    {
+        Items: ["Milk", "Ghee", "Yoghurt"],
+        Category: "Dairy Products",
+        DateOfExp: "2026-10-15"
+    },
+    {
+        Items: ["Chicken", "Buffalo", "Pork"],
+        Category: "Meat",
+        DateOfExp: "2026-10-12"
+    },
+    {
+        Items: ["Apple", "Guava", "Mango"],
+        Category: "Fruits",
+        DateOfExp: "2026-10-11"
+    }
+];
+
+
+const store = groceryArr.filter( (key) => {
+    return key.Category === "Meat";
+})
+
+console.log(store);
+
+
