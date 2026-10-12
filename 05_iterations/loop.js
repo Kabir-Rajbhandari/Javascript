@@ -397,7 +397,7 @@ const total = serialNum.reduce((acc, currval) => {
 console.log(total);
 
 
-const shoppingCart = [
+const shoppingCart = [  
     {
         courseName: "JS Course",
         price: 1999
