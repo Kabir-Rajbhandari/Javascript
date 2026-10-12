@@ -17,14 +17,60 @@
 <!-- DOM -->
 <!-- Window -> Document -> HTML -> Head & Body -->
 
+<!-- DOM selection methods -->
+<!-- document.getElementById(''); 
+      document.getElementsByClassName('');
+      document.querySelector('#/.');
+      document.querySelectorAll('.');
+      document.getElementById('').innerHTML; -> retrives and sets contect as actual HTML code
+      document.getElementById('').innerText; -> handles content strictly as plain, user-visible text.
+      document.getElementById('').textContent; -> retrives all the content 
+      document.getElementById('').style.color = "black"; -> set the content color
+      document.getElementById('').id;
+      document.getElementById('').className;
+      document.getElementById('').getAttribute;
+      document.getElementById('').setAttribute ('class', 'modifiedName'); // override it on the elements but not in the mainFile
+ -->
+
 <body class="bg-black">
+    <!-- can access the first li with the help of indexing concept 
+             while getting the querySelectorALL, gets the nodeList which is basically not the array, but while changind the style we can do with the indexing concept [], const tempList = document.querySelectorAll('li'); tempList[0].style.color = "red"; -->.
+
+    <!-- document.getElementsByClassName(); -> returns HTML collection, doesnot support forEach loop 
+              and document.querySelectorAll(); -> returns nodeList  and supprt forEach Loop 
+              but Besides that we can convert the dataType by: 
+              Array.from(<variableName>); -->
+
+    <!-- can also used the NodeList method forEach like this way: 
+             const tempo = document.querySelectorAll('li');
+             tempo.forEach((key) => key.style.backgroundColor = "orange");
+             -->
+
+    <!-- in case of, className Selectons: 
+              document.getElementsByClassName();
+              it return the HTML collections, whereas
+              we need to convert the HTML collection into Array like this to play with the forEach loop for map or else accordingly i.e.
+               Array.from(classNameHold).forEach((key) => key.style.backgroundColor = "red");
+               Similarly to the NodeList we can use the forEach method but incase of map and others we need to convert into Array first-->
+
+    <!--can also change with multiple style: 
+                            allH3.forEach((header) => {
+                header.style.color = "skyblue";
+                header.style.backgroundColor = "lightgreen";
+                header.style.padding = "10px";
+                header.innerText = "DOM Manipulation";})
+               -->
 
     <div>
         <h1 id="title" class="heading">Document Object Model (DOM)</h1>
         <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul>
     </div>
-
-
     <script src="../08_numsAndMath.js"></script>
 </body>
 
