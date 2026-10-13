@@ -71,7 +71,79 @@
             <li class="list-item">Four</li>
         </ul>
     </div>
-    <script src="../08_numsAndMath.js"></script>
+
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    <script>
+        // Parent and child relations
+        const parent = document.querySelector('.parent');
+        console.log(parent.children);
+        console.log(parent.children[1]); // can be access the specific child
+        console.log(parent.children[1].innerHTML); // can also be access the content
+
+
+        console.log("Printing Begin: ");
+
+        for (let i = 0; i <= (parent.children.length - 1); i++) {
+            console.log(`Day: ${parent.children[i].innerHTML}`);
+        }
+
+        parent.children[2].style.color = "orange";
+
+        // => First element child
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+        // can also be access from child-parent
+        const firstDay = document.querySelector('.day');
+        console.log(firstDay);
+        console.log(firstDay.parentElement);
+        console.log(firstDay.parentNode);
+        console.log(firstDay.nextElementSibling);
+
+        console.log(parent.childNodes);
+
+        // nodes
+        // creating elements
+        const div = document.createElement('div');
+        div.className = "main";
+        div.id = Math.round(Math.random() * 10 + 1);
+        div.setAttribute("title", "setting"); // => key, value basis
+        div.style.backgroundColor = "green";
+        div.style.padding = "12px";
+        // div.innerHTML = "Suiiiiii";
+        const addText = document.createTextNode("JavaScript");
+        div.appendChild(addText);
+        document.body.appendChild(div); //=> adding in the body 
+
+        // with a function:
+
+        function createAndAddElem(whattowrite, idName, className) {
+            const createElem = document.createElement('div');
+            createElem.className = className;
+            createElem.id = idName;
+            createElem.setAttribute("title", "usingFunction");
+            createElem.style.alignItems = "center";
+            createElem.style.opacity = "0.4";
+            createElem.style.borderRadius = "10px";
+            createElem.style.border = "2px solid green";
+            createElem.style.padding = "10px";
+            // 
+            const whatToWrite = document.createTextNode(whattowrite);
+            createElem.appendChild(whatToWrite);
+
+            document.body.appendChild(createElem);
+        }
+
+        createAndAddElem("Creating Something", "ID", "Class");
+
+        //
+
+    </script>
 </body>
 
 </html>
