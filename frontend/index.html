@@ -78,6 +78,13 @@
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
     </div>
+    <!-- Additional -->
+
+    <ul class="Programming">
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
     <script>
         // Parent and child relations
         const parent = document.querySelector('.parent');
@@ -141,7 +148,49 @@
 
         createAndAddElem("Creating Something", "ID", "Class");
 
-        //
+        // more-on DOM -> removing element,
+
+        function addLanguage(langName) {
+            const createLang = document.createElement('li');
+            createLang.innerHTML = `${langName}`;
+            document.querySelector('.Programming').appendChild(createLang);
+
+        }
+        addLanguage("Ruby");
+        addLanguage("Kotlin");
+
+        // more optimized form in the DSA approach
+
+        function addOptiLang(langName) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));
+
+            document.querySelector('.Programming').appendChild(li);
+        }
+
+        addOptiLang("C++");
+
+        // Edit
+
+        const editContent = document.querySelector('li:nth-child(3)');
+        // editContent.innerHTML = "Dart"; -> less optimized - 1st way
+
+        console.log(editContent);
+
+
+        const newLi = document.createElement('li');
+        newLi.textContent = "Dart";
+
+        editContent.replaceWith(newLi);
+
+        const firstLang = document.querySelector('li:first-child');
+        firstLang.outerHTML = "<li>Sunday</li>";
+
+
+        // remove -> remove()
+        const lastLang = document.querySelector('li:last-child');
+        console.log(lastLang);
+        lastLang.remove();
 
     </script>
 </body>
