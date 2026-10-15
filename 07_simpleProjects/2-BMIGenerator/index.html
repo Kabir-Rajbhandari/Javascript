@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form>
+            <label class="label" for="height">Height</label>
+            <br>
+            <div class="input_wrapper">
+                <input type="text" name="height" placeholder="0" class="height" id="userHeight">
+                <span class="inner">cm</span>
+            </div>
+
+            <br>
+
+            <label class="label" for="weight">Weight</label>
+            <br>
+            <div class="input_wrapper">
+                <input type="text" name="weight" placeholder="0" class="weight" id="userWeight">
+                <span class="inner">kg</span>
+            </div>
+
+            <br>
+
+            <div class="btn_wrapper">
+                <button id="calculate_BMI">Calculate</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="side-guide">
+        <h2>BMI Guide</h2>
+        <p><span class="r-arr">&rarr;</span> Under Weight: Less than 18.6</p>
+        <p><span class="r-arr">&rarr;</span> Normal Range: 18.6 and 24.9</p>
+        <p><span class="r-arr">&rarr;</span> Overweight: Greater than 24.9</p>
+        <div class="display_wrapper">
+            <span id="show_result"></span>
+            <div class="mini_wrapper">
+                <span id="displayMssg"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
