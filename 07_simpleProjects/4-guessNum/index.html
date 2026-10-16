@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4 - Guess Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <h1 id="title">Number Guessing Game</h1>
+        <p class="mssg">Try and guess a random number between 1 and 100.</p>
+        <p class="mssg">You have 10 attempts to guess the right number.</p>
+
+        <div class="wrapper">
+            <h3 class="label_num">Guess a number</h3>
+
+            <form>
+                <input type="text" class="userNum" id="userNum">
+                <br>
+                <button id="submit">Submit Guess</button>
+            </form>
+
+            <div class="result_wrapper">
+                <p class="previous_guess">Previous Guesses:<span class="guesses"></span></p>
+                <p class="guess-remain">Guesses Remaining:<span class="remaining">10</span></p>
+                <p class="lowHigh"></p>
+                <p class="err"></p>
+
+            </div>
+        </div>
+    </section>
+    <!-- 
+    <p>leftover click: <span class="left" id="leftover">10</span></p>
+    <button id="click">Click Here</button> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
