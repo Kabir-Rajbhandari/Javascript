@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="image_gallery/cal_favIcon.png" />
+</head>
+
+<body>
+  <h1>Calculator</h1>
+
+  <section id="calculator_wrapper">
+    <div class="screen_number">
+      <input type="text" id="number_reader" aria-label="number_reader" />
+    </div>
+    <span></span>
+    <div id="clear_container">
+      <button id="clear_data">C</button>
+    </div>
+
+    <div class="properties">
+      <button id="seven" class="number">7</button>
+      <button id="eight" class="number">8</button>
+      <button id="nine" class="number">9</button>
+      <button id="divide_number" class="operator">&#247;</button>
+    </div>
+    <div class="properties">
+      <button id="four" class="number">4</button>
+      <button id="five" class="number">5</button>
+      <button id="six" class="number">6</button>
+      <button id="multiply_number" class="operator">&#215;</button>
+    </div>
+    <div class="properties">
+      <button id="one" class="number">1</button>
+      <button id="two" class="number">2</button>
+      <button id="three" class="number">3</button>
+      <button id="substract_number" class="operator">&#8722;</button>
+    </div>
+    <div class="properties">
+      <button id="zero" class="number">0</button>
+      <button id="dot" class="number">.</button>
+      <button id="result" class="number">=</button>
+      <button id="add_number" class="operator">
+        &#43;
+      </button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
