@@ -4,33 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event</title>
+    <title>Document</title>
 </head>
 
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        justify-items: center;
+    }
+
     img {
-        width: 200px;
         height: auto;
+        width: 200px;
         object-fit: fill;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
 </style>
 
 <body>
-
     <h2>Image Gallery</h2>
-    <div class="gallery">
-        <ul id="images">
-            <li><img src="https://www.pexels.com/photo/majestic-cumulus-clouds-in-uzbekistan-skies-32076555/"
-                    id="cloud_one" alt="">
-            </li>
-            <li><img src="https://www.pexels.com/photo/aerial-view-of-white-clouds-9663275/" id="cloud_two" alt=""></li>
-            <li><img src="https://www.pexels.com/photo/aerial-view-of-white-clouds-9663275/" id="cloud_three" alt="">
-            </li>
-            <li><img src="https://www.pexels.com/photo/white-clouds-and-blue-sky-12810820/" id="cloud_four" alt=""></li>
-            <li><a href="https://google.com" id="google">Google</a></li>
-        </ul>
-    </div>
+    <ul id="image_wrapper">
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Oe5QKpD-1hn2VbuRNLvQJv5JroWHxNQjihJkH-aHCw&s=10"
+                id="cloud_one" alt=""></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0VwO5aCJUJjiEKCDrxuLGrmeU__FXPaVFgVUVUnb91w&s"
+                id="cloud_two" alt=""></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa72g2btzMUfNkGTQ3XJap1aaCwOSQmhigRWO3QQHehA&s=10"
+                id="cloud_three" alt=""></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnr9mx8fX5M5abjFsKc1SLI4G-ibeQx71jOugN0gUsw&s=10"
+                id="cloud_four" alt=""></li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+    </ul>
 
+
+    <script src="eventBasic.js">
+
+
+    </script>
 </body>
 
 </html>
