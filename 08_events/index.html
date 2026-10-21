@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async basic project</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // setTimeOut(): runs once
+
+        // => print only after 2sec
+        // setTimeout(() => {
+        //     console.log("It's Running...");
+
+        // }, 2000)
+
+        // setTimeout(function () {
+        //     console.log("loggind done after 3 sec..");
+        // }, 3000)
+
+        // const storeage = function () {
+        //     console.log("loggind done after 3 sec..");
+        // }
+
+        // // Storage => execute
+        // // storage => reference
+
+        // setTimeout(storeage, 2500);
+
+
+        // const changeText = () => document.querySelector('h1').innerHTML = "Modified Header";
+
+        // const changeMe = setTimeout(changeText, 3000);
+
+        // // clearTimeout()
+
+        // document.querySelector('#stop').addEventListener(
+        //     'click', () => {
+        //         clearTimeout(changeMe);
+        //         console.log("Stopped Successfully..");
+
+        //     }
+        // );
+
+
+        // setInterval() : runs every specified time not only once..
+        // setInterval(() => {
+        //     console.log("ITs now: " + Date.now());
+
+        // }, 2000);
+
+        // const set = () => console.log("ITs now: " + Date.now());
+        // setInterval(set, 2000);
+
+        // const set = (str) => {
+        //     console.log(str + Date.now());
+        // }
+
+        // setInterval(set, 3000, "Date: ");
+
+        // basic start-stop printing 
+        let i = 1;
+        let startInterval;
+        document.querySelector('#start').addEventListener('click', () => {
+            const startPrint = () => {
+                console.log(`Printing: ${i++}`);
+            };
+            startInterval = setInterval(startPrint, 1000);
+
+        });
+
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(startInterval);
+            console.log('Prinitng Stopped..');
+            i = 1;
+        });
+
+    </script>
+</body>
+
+</html>
