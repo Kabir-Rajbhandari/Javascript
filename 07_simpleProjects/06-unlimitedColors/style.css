@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    justify-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper{
+    background-color: white;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2% 4%;
+}
+
+p{
+    margin: 3% 0;
+}
+button{
+    margin: 2% 0 0 0;
+    padding: 2% 5%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+#startBtn{
+    background-color: green;
+}
+
+#stopBtn{
+    background-color: red;
+}
