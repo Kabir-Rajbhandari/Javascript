@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -43,11 +44,6 @@ h1 {
   overflow: hidden;
 }
 
-#calculator_wrapper .screen_number {
-  height: auto;
-  width: auto;
-  overflow: hidden;
-}
 
 #calculator_wrapper #clear_container {
   width: auto;
@@ -57,7 +53,10 @@ h1 {
   justify-content: flex-end;
 }
 
-#calculator_wrapper input {
+#calculator_wrapper .screen_number {
+  margin-bottom: 10%;
+  box-shadow: 0 0 15px 0 rgba(8, 8, 8, 0.8);
+  overflow-x: hidden;
   text-align: end;
   height: 80px;
   font-family: "digital-7";
@@ -69,12 +68,13 @@ h1 {
   width: 100%;
   border-radius: 8px;
   outline: none;
-  overflow: hidden;
   border: none;
   background-color: rgb(204, 222, 175);
 }
 
 #calculator_wrapper .properties {
+  height: auto;
+  width: 375px;
   margin: 13px 0 0 0;
   display: flex;
   align-items: center;
@@ -93,6 +93,10 @@ h1 {
   width: 70px;
   box-shadow: 0px 0px 8px 3px rgb(53, 51, 51);
   border-radius: 3px;
+}
+
+.clear_action{
+  display: flex;
 }
 
 #calculator_wrapper span {

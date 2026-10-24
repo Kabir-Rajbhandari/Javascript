@@ -13,40 +13,43 @@
   <h1>Calculator</h1>
 
   <section id="calculator_wrapper">
-    <div class="screen_number">
-      <input type="text" id="number_reader" aria-label="number_reader" />
-    </div>
-    <span></span>
-    <div id="clear_container">
-      <button id="clear_data">C</button>
+    <div class="screen_number" id="calcDisplay">
     </div>
 
-    <div class="properties">
-      <button id="seven" class="number">7</button>
-      <button id="eight" class="number">8</button>
-      <button id="nine" class="number">9</button>
-      <button id="divide_number" class="operator">&#247;</button>
+    <div class="buttons">
+      <div class="properties" class="clear_action">
+        <button id="clear_data" data-action="clear">C</button>
+      </div>
+
+      <div class="properties">
+        <button id="seven" data-action="number" data-value="7" class="number">7</button>
+        <button id="eight" data-action="number" data-value="8" class="number">8</button>
+        <button id="nine" data-action="number" data-value="9" class="number">9</button>
+        <button id="divide_number" data-action="operator" data-value="/" class="operator">&#247;</button>
+      </div>
+      <div class="properties">
+        <button id="four" data-action="number" data-value="4" class="number">4</button>
+        <button id="five" data-action="number" data-value="5" class="number">5</button>
+        <button id="six" data-action="number" data-value="6" class="number">6</button>
+        <button id="multiply_number" data-action="operator" data-value="x" class="operator">&#215;</button>
+      </div>
+      <div class="properties">
+        <button id="one" data-action="number" data-value="1" class="number">1</button>
+        <button id="two" data-action="number" data-value="2" class="number">2</button>
+        <button id="three" data-action="number" data-value="3" class="number">3</button>
+        <button id="substract_number" data-action="operator" data-value="-" class="operator">&#8722;</button>
+      </div>
+      <div class="properties">
+        <button id="zero" data-action="number" data-value="0" class="number">0</button>
+        <button id="dot" data-action="decimal"="number">.</button>
+        <button id="result" data-action="equals" class="number">=</button>
+        <button id="add_number" class="operator">
+          &#43;
+        </button>
+      </div>
+
     </div>
-    <div class="properties">
-      <button id="four" class="number">4</button>
-      <button id="five" class="number">5</button>
-      <button id="six" class="number">6</button>
-      <button id="multiply_number" class="operator">&#215;</button>
-    </div>
-    <div class="properties">
-      <button id="one" class="number">1</button>
-      <button id="two" class="number">2</button>
-      <button id="three" class="number">3</button>
-      <button id="substract_number" class="operator">&#8722;</button>
-    </div>
-    <div class="properties">
-      <button id="zero" class="number">0</button>
-      <button id="dot" class="number">.</button>
-      <button id="result" class="number">=</button>
-      <button id="add_number" class="operator">
-        &#43;
-      </button>
-    </div>
+
   </section>
 
   <script src="script.js"></script>
