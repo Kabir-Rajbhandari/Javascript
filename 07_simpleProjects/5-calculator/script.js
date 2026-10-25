@@ -24,7 +24,8 @@ function calculator(){
 
     let formattedInt = parseFloat(integerPart).toLocaleString('en-US');
     if(isNaN(parseFloat(integerPart)) && integerPart === '') formattedInt = '0';
-    
+  
+    // terminary concept
     return (isNegative ? '-' : '') + formattedInt + decimalPart;
 
     
