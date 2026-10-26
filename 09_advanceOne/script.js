@@ -26,3 +26,15 @@ function apiRequest(){
 }
 
 apiRequest();
+
+
+// // REST parameters..
+// function sum (...numbers){
+//     let total = 0;
+//     for(let i = 0; i < numbers.length; i++){
+//         total += numbers[i];
+//     }
+//     console.log(total);
+// }
+
+// sum(10,20,30,40);
