@@ -15,6 +15,14 @@ function apiRequest(){
         }
     };
     xhr.send(); // call
+
+
+    // ECMAScript: it's a standardized scripting language specification createed to set the rules, syntax, and core features for languages like JavaScript.
+    // JS -> run time environmemnt, node js is also implementation of  v8 engine
+    // v8 -> it's a Google's open source high-performance JavaScript and WebAssembly engine, written in C++. It is basically used in Chrome and in Node.js, among others. It implements ECMAScript and WebAssembly, and runs on Windows, macOS, and Linux systems that use x64, IA-32, or ARM processors. V8 can be embedded into any C++ application.
+    // JS actually runs under the C++, (act like a wrapper)
+    // -> v8 engine: debugging
+
 }
 
 apiRequest();
