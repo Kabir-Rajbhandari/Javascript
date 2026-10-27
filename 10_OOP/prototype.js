@@ -105,3 +105,35 @@ String.prototype.trueLength = function (){
 }
 
 userInput.trueLength();
+
+
+
+
+
+    // imp concept: 
+    /**
+     * window = {this = window} -> window 
+     * node = {} -> empty 
+     */
+
+    // call-back
+
+function setUserName(userName){
+    // complex DB calls done (suppose)
+    this.userName = userName;
+
+}
+
+function createUser(userName, email, password){
+    // outsourced
+    // call method: 
+    setUserName.call(this, userName);
+
+    this.email = email;
+    this.password = password;
+}
+
+
+const user3 = new createUser("randomMe", "random@google.com", "R@ndom123");
+console.log(user3);
+            

@@ -122,4 +122,3 @@ obj1.printMe();
 
     The new object is returned: After the constructor function has been called, if it doesnot return a non-primitive value (object, array, function, etc.) the newly created object is returned.
  */
-
