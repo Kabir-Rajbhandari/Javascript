@@ -1,5 +1,6 @@
 // class constructor
 // ES6
+// mostly classed bassed syntax is used,..
 
 class User {
   constructor(userName, email, password) {
