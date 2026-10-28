@@ -1,23 +1,22 @@
 // class constructor
 // ES6
 
-class User{
-    constructor(userName, email, password){
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-    }
+class User {
+  constructor(userName, email, password) {
+    this.userName = userName;
+    this.email = email;
+    this.password = password;
+  }
 
-    // encryptPassword
+  // encryptPassword
 
-    encryptPassword(){
-        return `${this.password}@79465`;
-    }
+  encryptPassword() {
+    return `${this.password}@79465`;
+  }
 
-    capitalizeUserName(){
-        return `${this.userName.toUpperCase()}`;
-    }
-
+  capitalizeUserName() {
+    return `${this.userName.toUpperCase()}`;
+  }
 }
 
 // new instance/obj for a class
@@ -26,23 +25,21 @@ console.log(userMe);
 console.log(userMe.encryptPassword());
 console.log(userMe.capitalizeUserName());
 
-
 // behind the scene:
 
-function userF(userName, email, password){
-    this.userName = userName;
-    this.email = email;
-    this.password = password;
-
+function userF(userName, email, password) {
+  this.userName = userName;
+  this.email = email;
+  this.password = password;
 }
 
-userF.prototype.encryptPassword = function (){
-    return `${this.password}@79465`;
-}
+userF.prototype.encryptPassword = function () {
+  return `${this.password}@79465`;
+};
 
-userF.prototype.capitalizeUserName = function() {
-    return `${this.userName.toUpperCase()}`;   
-}
+userF.prototype.capitalizeUserName = function () {
+  return `${this.userName.toUpperCase()}`;
+};
 
 const userU = new userF("Jonny", "johnny.com", "124587");
 console.log(userU);
