@@ -34,3 +34,6 @@ for (let [key, value] of Object.entries(coffee)) {
     console.log(`${key} : ${value}`);
   }
 }
+
+// "know about the Object properties as own created object's can be set to writeable, enumerable, configurable as false with the help of Object.defineProperties/property, as
+// example the Math.PI value cannot able to change as it's all properties are set 'false'
